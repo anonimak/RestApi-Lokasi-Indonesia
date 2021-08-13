@@ -13,8 +13,8 @@
 |
 */
 
-$router->get('/location', function () use ($router) {
-    return $router->app->version();
+$router->get('/', function () use ($router) {
+    return redirect('api/documentation');
 });
 
 $router->group(['prefix' => 'v1'], function () use ($router) {
