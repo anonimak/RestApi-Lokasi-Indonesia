@@ -17,7 +17,7 @@ $router->get('/location', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'location'], function () use ($router) {
+$router->group(['prefix' => 'v1'], function () use ($router) {
     $router->group(['prefix' => 'province'], function () use ($router) {
         $router->get('/', 'ProvinceController@index');
         $router->get('/{id}', 'ProvinceController@getById');
