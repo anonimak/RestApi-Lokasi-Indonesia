@@ -1,0 +1,189 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "MIPDEVP Location Indonesia API",
+        "contact": {
+            "name": "Support Team",
+            "email": "sanonimak@gmail.com"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/v1/district/": {
+            "get": {
+                "tags": [
+                    "Get All District"
+                ],
+                "description": "Untuk mendapatkan semua data kabupaten. terdapat parameter query untuk melakukan pencarian data kabupaten.",
+                "operationId": "/v1/district/",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Optional parameter for search district",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample district"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        },
+        "/v1/district/{district_id}": {
+            "get": {
+                "tags": [
+                    "Get District by Id"
+                ],
+                "operationId": "/v1/district/{district_id}",
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample district"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        },
+        "/v1/province/": {
+            "get": {
+                "tags": [
+                    "Get All Province"
+                ],
+                "description": "Untuk mendapatkan semua data provinsi. terdapat parameter query untuk melakukan pencarian data provinsi.",
+                "operationId": "/v1/province/",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Optional parameter for search province",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample province"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        },
+        "/v1/province/{province_id}": {
+            "get": {
+                "tags": [
+                    "Get Province by Id"
+                ],
+                "operationId": "/v1/province/{province_id}",
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample province"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        },
+        "/v1/subdistrict/": {
+            "get": {
+                "tags": [
+                    "Get All Subdistrict"
+                ],
+                "description": "Untuk mendapatkan semua data kecamatan. terdapat parameter query untuk melakukan pencarian data kecamatan.",
+                "operationId": "/v1/subdistrict/",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Optional parameter for search subdistrict",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample subdistrict"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        },
+        "/v1/subdistrict/{subdistrict_id}": {
+            "get": {
+                "tags": [
+                    "Get Subdistrict by Id"
+                ],
+                "operationId": "/v1/subdistrict/{subdistrict_id}",
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample subdistrict"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        },
+        "/v1/village/": {
+            "get": {
+                "tags": [
+                    "Get All Village"
+                ],
+                "description": "Untuk mendapatkan semua data desa. terdapat parameter query untuk melakukan pencarian data desa.",
+                "operationId": "/v1/village/",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Optional parameter for search village",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample village"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        },
+        "/v1/village/{village_id}": {
+            "get": {
+                "tags": [
+                    "Get Village by Id"
+                ],
+                "operationId": "/v1/village/{village_id}",
+                "responses": {
+                    "200": {
+                        "description": "Returns some sample village"
+                    },
+                    "400": {
+                        "description": "Error: Bad request. When required parameters were not supplied."
+                    }
+                }
+            }
+        }
+    }
+}
